@@ -1,19 +1,20 @@
 
 const buttonEl = document.getElementById("Button")
-let size = 0
+let index = 1
 let clickSZ = 1
 
 function changeSize() {
-        size += clickSZ
-        buttonEl.style.fontSize = size + "em"
+  index += clickSZ
+        buttonEl.style.fontSize = index + "em"
 
-        if (size > 10 || size < 0) {
+        if (index > 10 || index < 0) {
           clickSZ *= -1
         }
+        setTimeout(changeSize, 500)
       }
-
- // click button to change size     
+    
  buttonEl.addEventListener("click", changeSize)
 
- //automatically change size
- setInterval(changeSize, 300)
+
+
+
