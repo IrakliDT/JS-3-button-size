@@ -1,4 +1,4 @@
-
+//  button sizing
 const buttonEl = document.getElementById("Button")
 let index = 1
 let clickSZ = 1
@@ -16,5 +16,13 @@ function changeSize() {
  buttonEl.addEventListener("click", changeSize)
 
 
+ // music
+ let play = document.getElementById("Button");
+     function playMusic() {
+      let audio = new Audio("music/DavidGuetta.mp3");
+      audio.play();
+    }
+ 
+ Button.addEventListener("click", playMusic)   
 
 
